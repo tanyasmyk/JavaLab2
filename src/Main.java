@@ -63,12 +63,11 @@ public class Main {
 
 
     public int findMax(double [] array) {
-        double max = array[0];
+      //  double max = array[0]; {7,3,2,8}
         int index=0;
-        for(int i=0; i<array.length; i++ ) {
-            if(array[i]>max) {
-                max = array[i];
-                index=i;
+        for(int i=1; i<array.length; i++ ) {
+            if(array[i]>array[index]) {
+                   index=i;
             }
         }
         return index;
@@ -98,7 +97,7 @@ public class Main {
 
     public double midSummArray(double[] array)
     {
-        summArray(array);
+       // summArray(array);
         return  summArray(array)/array.length;
     }
     public void showMinMax()
